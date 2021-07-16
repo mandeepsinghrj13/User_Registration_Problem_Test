@@ -13,5 +13,14 @@ public class UserRegistration {
 		Matcher match = patt.matcher(firstname);
 		return match.matches();
 	}
+	public static boolean isLastName(String lastname) {
+		String regex = "^[A-Z]{1}[a-z]{2,}$"; //regex check for last name
+		Pattern patt = Pattern.compile(regex);
+		if (lastname == null) {
+			return false;
+		}
+		Matcher match = patt.matcher(lastname);
+		return match.matches();
+	}
 	
 }
